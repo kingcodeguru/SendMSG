@@ -1,0 +1,28 @@
+﻿<Page x:Class="WpfMultiChat.chatPage" Background="AliceBlue"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfMultiChat"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="650"
+      Title="chatPage"
+      KeyDown="Page_KeyDown">
+    <Grid>
+        <TextBox Name ="t1" HorizontalAlignment="Left" Height="62" TextWrapping="Wrap" Text="write your message here" VerticalAlignment="Top" Width="320" Margin="20,325,0,0"/>
+
+        <TextBlock Visibility="Hidden" Name ="tb1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="You will see the chat here." VerticalAlignment="Top" Height="297" Width="630" Foreground="DarkGreen" Background="Black" FontSize="16" Margin="10,10,0,0"/>
+        <TextBlock Visibility="Hidden" Name ="tb2" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Attempts" VerticalAlignment="Top" Margin="628,69,0,0" Width="127" Height="58" Foreground="Pink"/>
+        <TextBlock Visibility="Hidden" Name ="er" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Errors" VerticalAlignment="Top" Margin="628,204,0,0" Height="173" Width="127" Foreground="Pink"/>
+        <Button Name ="B1" Content="send message" HorizontalAlignment="Left" VerticalAlignment="Top" Width="162" Margin="478,325,0,0" Click="B1_Click" FontWeight="Bold" Foreground="Black" Background="Transparent" Height="62"/>
+        <ScrollViewer Name="scroller" HorizontalAlignment="Left" Height="320" VerticalAlignment="Top" Width="650">
+            <StackPanel Name="chat" Width="600" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <StackPanel Orientation="Horizontal" Width="600">
+                    <Button Background="DarkRed" Click="exitChat" Content="EXIT CHAT" Width="100"/>
+                    <TextBlock x:Name="title" TextAlignment="Center" Width="500" Background="PaleVioletRed" VerticalAlignment="Top" HorizontalAlignment="Center" TextWrapping="Wrap" Text="ChatName" FontSize="20" FontFamily="David"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <Button Name ="B2" Content="select file" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Margin="366,325,0,0" Click="B2_Click" FontWeight="Bold" Foreground="Black" Background="Transparent" Height="62"/>
+    </Grid>
+</Page>

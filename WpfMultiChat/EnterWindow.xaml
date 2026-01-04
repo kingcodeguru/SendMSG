@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfMultiChat.EnterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMultiChat"
+        mc:Ignorable="d"
+        Title="Enter Window - sendMsg Server" Height="370.5" Width="516"
+        KeyDown="PressedKey">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="339" VerticalAlignment="Top" Width="508">
+            <Button Name="login" Background="Turquoise" Content="log in" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="32,232,0,0" Click="log"/>
+            <Button Name="signup" Background="LightGray" Content="sign up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="74" Margin="175,232,0,0" Click="sign"/>
+            <TextBlock Name="errorBox" HorizontalAlignment="Left" Margin="32,278,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="51" Width="457"/>
+            <TextBox Name="serverIP" HorizontalAlignment="Left" Height="23" Margin="32,148,0,0" TextWrapping="Wrap" Text="please enter server's IP" VerticalAlignment="Top" Width="217"/>
+            <TextBox Name="username" HorizontalAlignment="Left" Height="23" Margin="32,176,0,0" TextWrapping="Wrap" Text="please enter username" VerticalAlignment="Top" Width="217"/>
+            <TextBox Name="password" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="please enter password" VerticalAlignment="Top" Width="217" Margin="32,204,0,0"/>
+            <TextBlock FontFamily="Elephant" FontSize="18" HorizontalAlignment="Left" Margin="36,17,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="93" Width="453"><Run Text="Hello and welcome to SendMsg."/><LineBreak/><LineBreak/><Run Text="Please enter username and password :)"/></TextBlock>
+            <StackPanel HorizontalAlignment="Left" Height="51" Margin="292,192,0,0" VerticalAlignment="Top" Width="197">
+                <RadioButton Name="yes" Content="YES!" Height="25" GroupName="encrypted"/>
+                <RadioButton Name="no" Content="NO" Height="25" GroupName="encrypted"/>
+            </StackPanel>
+            <TextBlock HorizontalAlignment="Left" Margin="292,139,0,0" TextWrapping="Wrap" Text="Do you want the communication to be encrypted?" VerticalAlignment="Top" Width="197" Height="43"/>
+        </Grid>
+
+    </Grid>
+</Window>
